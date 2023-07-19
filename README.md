@@ -12,23 +12,32 @@ yarn dev
 pnpm dev
 ```
 
+Second, create .env file and fill up relevant variables shown in `env.example`
+
+```
+DATABASE_URL=
+OPENAI_API_KEY=
+```
+
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## API Endpoints
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+```
+1. [GET] api/correctness:
+Return all messages stored in database.
 
-To learn more about Next.js, take a look at the following resources:
+2. [POST] /api/correctness:
+Create one new message that will be corrected by OpenAI API & stored in database.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. [POST] /api/random:
+Return one random messages stored in database.
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Product Demo
+![Product Demo Screenshot](https://drive.google.com/uc?export=view&id=1OxtCCZlmXaI2qT8xX9CNN13OZO1DmLKv)
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Product is also hosted on Vercel and can be accessd through:
+https://micro-tech.vercel.app/
